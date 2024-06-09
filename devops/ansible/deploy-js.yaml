@@ -88,8 +88,8 @@
         - supervisorctl update
         - supervisorctl restart roadtok8s-js
 
-handlers:
-  - name: restart nginx
-    systemd:
-      name: nginx
-      state: restarted
+  handlers:
+    - name: restart nginx
+      systemd:
+        name: nginx
+        state: restarted
