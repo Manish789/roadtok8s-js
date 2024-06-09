@@ -53,6 +53,12 @@
         dest: /opt/projects/roadtok8s/js/src/
         recursive: yes
         delete: yes
+    - name: Copy Package.json to remote server
+      synchronize:
+        src: "{{ playbook_dir }}/../../package.json"
+        dest: /opt/projects/roadtok8s/js/package.json
+        recursive: yes
+        delete: yes
     - name: Install Node.js packages
       shell: |
         npm install
