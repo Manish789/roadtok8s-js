@@ -51,7 +51,7 @@ jobs:
     #  working-directory: ./devops/ansible
     #  run: |
     #   ansible-playbook install-nginx.yaml
-    - name: Deploy Python via Ansible
+    - name: Deploy Node.js via Ansible
       working-directory: ./devops/ansible
       run: |
         ansible-playbook deploy-js.yaml
