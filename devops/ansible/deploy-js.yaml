@@ -25,13 +25,13 @@
         state: present
     - name: "Add nodejs {{ nodejs_v }}.x ppa for apt repo"
       apt_repository:
-        repo: "deb https://deb.nodesource.com/node_{{ nodejs_v }}.x bionic main"
+        repo: deb https://deb.nodesource.com/node_{{ nodejs_v }}.x bionic main
         update_cache: yes
     - name: Install Node.js
       apt:
+        update_cache: yes
         name: nodejs
         state: present
-        update_cache: yes
     - name: Update npm globally
       npm:
         global: yes
